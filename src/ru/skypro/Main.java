@@ -25,13 +25,20 @@ public class Main {
     public static void task2() {
         int a = 0;
         int b = 1;
-        int nextNumber;
+        int nextNumberOne;
+        int nextNumberTwo;
+
         System.out.println(a + "" + "\n" + b + "");
         for (int i = 2; i <= 9; i++) {
-            nextNumber = a + b;
-            System.out.println(nextNumber + " ");
+            nextNumberOne = a + b;
+            nextNumberTwo = b + nextNumberOne;
+            if(i % 2 == 0) {
+                System.out.println(nextNumberOne + " ");
+                System.out.println(nextNumberTwo + " " );
+            }
             a = b;
-            b = nextNumber;
+            b = nextNumberOne;
+
         }
     }
 }
